@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MyMidterm</string>
+    <string name="dummy_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pharetra diam a tempus aliquet. Pellentesque a dui ac sem condimentum ullamcorper. Nulla in risus quam. Pellentesque vitae scelerisque tellus, sed consequat metus. Sed porttitor neque metus, id congue libero mattis at. Nam sollicitudin sollicitudin rhoncus. Aliquam posuere nibh et mi gravida, id pretium nunc ultricies. Fusce enim tellus, vestibulum pretium risus a, sagittis viverra massa. Nunc maximus, sapien ac rhoncus dapibus, ipsum purus porttitor magna, in cursus risus ante sed nulla.</string>
 </resources>
