@@ -1,4 +1,4 @@
-package de.mymidterm.ui.theme
+package de.mymidterm.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

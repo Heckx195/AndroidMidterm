@@ -1,4 +1,4 @@
-package de.mymidterm.models
+package de.mymidterm.domain.model
 
 data class FootballMatch (
     val id: Int,

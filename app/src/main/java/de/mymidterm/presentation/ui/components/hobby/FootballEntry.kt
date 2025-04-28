@@ -1,4 +1,4 @@
-package de.mymidterm.ui.components.hobby
+package de.mymidterm.presentation.ui.components.hobby
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -15,7 +15,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import de.mymidterm.models.FootballMatch
+import de.mymidterm.domain.model.FootballMatch
 
 @Composable
 fun FootballEntry(

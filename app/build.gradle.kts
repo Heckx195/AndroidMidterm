@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    kotlin("kapt")
 }
 
 android {
@@ -60,4 +61,13 @@ dependencies {
 
     implementation("com.airbnb.android:lottie-compose:6.0.0")
 
+    implementation("io.insert-koin:koin-core:3.1.2")
+    implementation("io.insert-koin:koin-android:3.1.2")
+    implementation("io.insert-koin:koin-androidx-compose:3.1.2")
+
+    implementation("androidx.room:room-runtime:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
+
+    implementation("com.google.code.gson:gson:2.8.9")
 }

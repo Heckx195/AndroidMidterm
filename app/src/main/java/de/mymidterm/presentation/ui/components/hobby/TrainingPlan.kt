@@ -1,4 +1,4 @@
-package de.mymidterm.ui.components.hobby
+package de.mymidterm.presentation.ui.components.hobby
 
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.RepeatMode
@@ -18,7 +18,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import de.mymidterm.models.TrainingDay
+import de.mymidterm.domain.model.TrainingDay
 import kotlinx.coroutines.launch
 
 @Composable

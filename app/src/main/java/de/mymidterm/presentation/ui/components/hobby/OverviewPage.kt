@@ -1,4 +1,4 @@
-package de.mymidterm.ui.components.hobby
+package de.mymidterm.presentation.ui.components.hobby
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -8,27 +8,30 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.material3.Divider
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import de.mymidterm.models.FootballMatch
-import de.mymidterm.models.TrainingDay
+import de.mymidterm.presentation.viewmodel.FootballMatchViewModel
+import de.mymidterm.presentation.viewmodel.TrainingDayViewModel
 
 @Composable
 fun OverviewPage(
     navController: NavHostController,
-    footballResults: List<FootballMatch>,
-    trainingPlan: List<TrainingDay>,
+    footballMatchViewModel: FootballMatchViewModel,
+    trainingDayViewModel: TrainingDayViewModel,
     modifier: Modifier = Modifier,
 ) {
+    val footballResults = footballMatchViewModel.footballMatches.collectAsState().value
+    val trainingPlan = trainingDayViewModel.trainingDays.collectAsState().value
+
     Column(
         modifier = Modifier.fillMaxWidth(),
     ) {
@@ -54,6 +57,8 @@ fun OverviewPage(
                 }
             }
         }
+        AddFootballResultButton(footballMatchViewModel)
+
         HorizontalDivider(
             modifier = Modifier.padding(horizontal = 16.dp),
             thickness = 4.dp,
@@ -70,5 +75,6 @@ fun OverviewPage(
             )
         )
         TrainingPlan(trainingPlan, navController)
+        AddTrainingDayButton(trainingDayViewModel)
     }
 }

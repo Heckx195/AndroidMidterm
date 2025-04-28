@@ -1,4 +1,4 @@
-package de.mymidterm.ui.components.lottie
+package de.mymidterm.presentation.ui.components.lottie
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
