@@ -45,7 +45,7 @@ fun OverviewPage(
                 textAlign = TextAlign.Center
             )
         )
-        Box(Modifier.height(360.dp)) {
+        Box(Modifier.height(300.dp)) { // 360.dp
             LazyVerticalGrid(
                 columns = GridCells.Adaptive(minSize = 128.dp),
                 modifier = modifier.padding(8.dp)
@@ -74,7 +74,7 @@ fun OverviewPage(
                 textAlign = TextAlign.Center
             )
         )
-        TrainingPlan(trainingPlan, navController)
         AddTrainingDayButton(trainingDayViewModel)
+        TrainingPlan(trainingPlan, navController)
     }
 }
