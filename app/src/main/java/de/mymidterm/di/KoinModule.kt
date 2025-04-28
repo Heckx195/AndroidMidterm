@@ -27,4 +27,4 @@ val presentationModule = module {
     viewModel { TrainingDayViewModel(get()) }
 }
 
-// Info: provide the database and DAO dependencies.
+// Info: provide the database and DAO dependencies with SOLID-Principle.
